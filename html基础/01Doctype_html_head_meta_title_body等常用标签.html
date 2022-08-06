@@ -1,0 +1,73 @@
+<!--这段代码表示：当前页面采取的是 HTML5 版本来显示网页 -->
+<!--  <!DOCTYPE> 声明位于文档中的最前面的位置，处于 <html> 标签之前。
+      <!DOCTYPE> 声明不是一个 HTML 标签；它是用来告知 Web 浏览器页面使用了哪种 HTML 版本。
+ -->
+<!--也可以小写 <!doctype html> -->
+<!DOCTYPE html>
+
+<!--  <html> 标签告知浏览器这是一个 HTML 文档。
+      <html> 标签是 HTML 文档中最外层的元素。
+      lang 属性规定元素内容的语言。html5中lang 属性可用于任何的 HTML 元素，一般用于html标签中
+          <element lang="language_code">，language_code：en表示English，zh表示Chinese
+            在 HTML 中，国家/地区代码可作为 lang 属性中语言代码的补充。最后两个字符定义国家/地区
+              lang="zh-CN" 表示中文-中国
+-->
+<html lang="zh-CN">
+
+<!--  <head> 元素是所有头部元素的容器。
+        <head> 元素必须包含文档的标题（title），可以包含脚本、样式、meta 信息 以及其他更多的信息。
+        以下列出的元素能被用在 <head> 元素内部：
+          <title> （在头部中，这个元素是必需的）
+          <style>
+          <base>
+          <link>
+          <meta>
+          <script>
+          <noscript> 
+  -->
+
+<head>
+  <!-- 注意：对于中文网页需要使用<meta charset="utf-8"> 声明编码，否则会出现乱码。-->
+  <meta charset="UTF-8">
+  <!-- meta主要用于设置网页中的一些元数据，元数据：用来描述数据的数据
+    <meta> 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎和更新频度的描述和关键词
+    <meta> 标签永远位于 head 元素内部,在 HTML 中，<meta> 标签没有结束标签。
+      注意： 元数据通常以 名称/值 对出现。
+      注意： 如果没有提供 name 属性，那么名称/值对中的名称会采用 http-equiv 属性的值。
+    如：
+      charset 指定网页字符集
+      name 指定数据的名称
+      content 指定数据的内容
+
+        "keywords" 是一个经常被用到的名称。它为文档定义了一组关键字。某些搜索引擎在遇到这些关键字时，会用这些关键字对文档进行分类。
+        keywords表示网页的关键字，可以同事指定多个关键字，关键字之间用逗号隔开
+        京东的主页的meta如下：
+            <meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东"/>
+            表示在浏览器中输入这些关键字，搜索结果会出现京东的主页
+
+        description 用于指定网页的描述
+        如下还是京东主页的meta
+            <meta name="description"
+                content="京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!"/>
+            表示在浏览器中输入关键字，搜索到的结果中，都会有一段对超链接的描述
+
+        title标签的内容作为搜索结果的超链接上的文字显示
+
+        <meta http-equiv="refresh" content="3;url=https://www.baidu.com">
+        将网页自动重定向另一个网站，实现自动跳转，3表示自动跳转时间
+        -->
+  <meta name="keywords" content="meta,html,学习教程">
+  <meta name="description" content="这是一个学习教程网页">
+  <!-- <meta http-equiv="refresh" content="3;url=https://www.baidu.com"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <title>Doctype标签</title>
+</head>
+
+<body>
+  html、head、body标签是html文件的骨架，不能没有这三个标签，当少了其中的标签时，浏览器会自动加上
+</body>
+
+</html>

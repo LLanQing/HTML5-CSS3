@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02-自结束标签和字符实体和标签属性</title>
+</head>
+
+<body>
+  <!-- 常见的自结束标签:
+      <img>或者<img />
+      <imput>或者<imput />
+      <meta>或者<meta />
+      <br>或者<br />
+        注意: H5(HTML5)的规范中推荐我们在书写自结束标签的时候不要加空格和/(斜线),
+        就直接写一个标签名就好了 -->
+  <!-- 注意：注释不能嵌套 -->
+
+  <!-- 网页中编写多个空格，网页默认解析为一个空格 
+      在 HTML 中，某些字符是预留的。
+      在 HTML 中不能使用小于号（<）和大于号（>），这是因为浏览器会误认为它们是标签。
+      如果希望正确地显示预留字符，我们必须在 HTML 源代码中使用字符实体（character entities）
+      字符实体类似这样：
+          &entity_name;
+          或者
+          &#entity_number;
+          常见的实体符号：
+              空格：&nbsp;
+              大于号：&gt;
+              小于号：&lt;
+      -->
+  <p>编写多个 空格</p>
+  <p>使用实体符号编写多个 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;空格</p>
+
+  <!-- 
+  		属性，在标签中（开始标签或自结束标签）还可以设置属性
+  			属性是一个名值对（x=y）
+  			属性用来设置标签中的内容如何显示
+  			
+  			属性和标签名或其他属性应该使用空格隔开
+  			
+  			属性不能瞎写，应该根据文档中的规定来编写，
+  				有些属性有属性值，有些没有。如果有属性值，属性值应该使用引号引起来
+  			
+  			
+  	-->
+  <h1>这是我的<font color="red" size='3'>第三个</font>网页！</h1>
+
+
+</body>
+
+</html>

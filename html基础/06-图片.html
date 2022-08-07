@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>图片</title>
 </head>
+
 <body>
-    
+	<!-- 图片标签<img>用于向当前页面中引入一个外部图片
+		<img> 标签有两个必需的属性：src 和 alt。
+		注释：从技术上讲，图像并不会插入 HTML 页面中，而是链接到 HTML 页面上。
+					<img> 标签的作用是为被引用的图像创建占位符。
+
+		使用img标签来引入外部图片，img标签是一个自结束标签
+		img这种元素属于替换元素（块和行内元素之间，具有两种元素的特点）
+		属性：
+				src 属性指定的是外部图片的路径（路径规则和超链接是一样的）
+
+				alt 规定图像的替代文本，这个替换文本默认情况下不会显示，有些浏览器会图片无法加载时显示
+						搜索引擎会根据alt中的内容来识别图片，如果不写alt属性则图片不会被搜索引擎所收录
+						alt 文本的使用原则：
+							如果图像包含信息，使用 alt 描述图像
+							如果图像在 <a> 元素中，使用 alt 描述目标链接
+							如果图像仅供装饰，请使用 alt=""
+
+				width 图片的宽度 (默认单位是像素)
+
+				height 图片的高度    
+						- 宽度和高度中如果只修改了一个，则另一个会等比例缩放
+				注意：
+						一般情况在pc端，不建议修改图片的大小，需要多大的图片就裁多大
+						但是在移动端，经常需要对图片进行缩放（大图缩小）
+				
+				loading 属性指定浏览器是应立即加载图像还是延迟加载图像。可选值：
+								eager 默认，图像立即加载。
+								lazy 图像延迟加载，只有鼠标滚动到该图片所在位置才会显示。
+				
+				title 提示文本（鼠标放到图像上，显示的文字）,这个是全局属性，所有标签都有这个属性
+
+		图片的格式：
+				jpeg(jpg)
+						- 支持的颜色比较丰富，不支持透明效果，不支持动图
+						- 一般用来显示照片
+				gif
+						- 支持的颜色比较少，支持简单透明，支持动图
+						- 颜色单一的图片，动图
+				png
+						- 支持的颜色丰富，支持复杂透明，不支持动图
+						- 颜色丰富，复杂透明图片（专为网页而生）
+				webp
+						- 这种格式是谷歌新推出的专门用来表示网页中的图片的一种格式
+						- 它具备其他图片格式的所有优点，而且文件还特别的小
+						- 缺点：兼容性不好
+				base64 
+						- 将图片使用base64编码，这样可以将图片转换为字符，通过字符的形式来引入图片    
+						- 一般都是一些需要和网页一起加载的图片才会使用base64
+				效果一样，用小的
+				效果不一样，用效果好的
+	-->
+	<h3>本地图片</h3>
+	<img title="提示文本（鼠标放到图像上，显示的文字）,这个是全局属性，所有标签都有这个属性" src="../images/001.jpg" alt="图片加载不出来是显示的文本提示../images/001.jpg"
+		width="1040px">
+	<hr>
+	<h3>引用第三方图片</h3>
+	<img width="200" src="https://d2ggl082rr1mkp.cloudfront.net/category/IronMan_preview_1521810286_220_310.jpeg"
+		alt="钢铁侠">
+	<hr>
+	<h3>图片延迟加载</h3>
+	<img loading="lazy" src="https://cn.vuejs.org/images/logo.svg" alt="图片加载不出来是显示的文本提示:加载中" height="215">
 </body>
+
 </html>

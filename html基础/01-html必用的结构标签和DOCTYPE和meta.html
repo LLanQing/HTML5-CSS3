@@ -27,8 +27,18 @@
   -->
 
 <head>
-  <!-- 注意：对于中文网页需要使用<meta charset="utf-8"> 声明编码，否则会出现乱码。-->
-  <meta charset="UTF-8">
+  <!--   <title> 标签定义文档的标题，在所有 HTML 文档中是必需的。
+  <title>元素：
+    定义浏览器工具栏中的标题
+    提供页面被添加到收藏夹时的标题
+    显示在搜索引擎结果中的页面标题，可以方便搜索引擎索引页面
+
+    提示和注释
+    注释：一个 HTML 文档中不能有一个以上的 <title> 元素。
+    提示：如果您遗漏了 <title> 标签，文档作为 HTML 是无效的。
+  -->
+  <title>01-html必用的结构标签和DOCTYPE和meta</title>
+
   <!-- meta主要用于设置网页中的一些元数据，元数据：用来描述数据的数据
     <meta> 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎和更新频度的描述和关键词
     <meta> 标签永远位于 head 元素内部,在 HTML 中，<meta> 标签没有结束标签。
@@ -55,19 +65,19 @@
 
         <meta http-equiv="refresh" content="3;url=https://www.baidu.com">
         将网页自动重定向另一个网站，实现自动跳转，3表示自动跳转时间
-        -->
+  -->
+  <!-- 注意：对于中文网页需要使用<meta charset="utf-8"> 声明编码，否则会出现乱码。-->
+  <meta charset="UTF-8">
   <meta name="keywords" content="meta,html,学习教程">
   <meta name="description" content="这是一个学习教程网页">
   <!-- <meta http-equiv="refresh" content="3;url=https://www.baidu.com"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
-  <title>Doctype标签</title>
 </head>
 
 <body>
-  html、head、body标签是html文件的骨架，不能没有这三个标签，当少了其中的标签时，浏览器会自动加上
+  html、head、body、title标签是html文件的骨架，不能没有这三个标签，当少了其中的标签时，浏览器会自动加上
 </body>
 
 </html>

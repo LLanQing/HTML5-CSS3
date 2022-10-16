@@ -1,0 +1,20 @@
+.box1 {
+  height: 500px;
+  width: 500px;
+  background-color: #bfa;
+}
+.box1 > div {
+  width: 200px;
+  background-color: blue;
+}
+.box1 > div .box3 {
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+}
+.box1 .box4 {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+/*# sourceMappingURL=./Nesting.css.map */

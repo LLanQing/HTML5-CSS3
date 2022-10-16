@@ -1,0 +1,47 @@
+/* 
+  混合(Mixin)是一种将一组属性从一个规则集包含(或混入)到另一个规则集的方式，可理解为复制粘贴。
+    1.普通混合 语法：选择器();
+*/
+.box1 {
+  height: 200px;
+  width: 200px;
+  background-color: #bfa;
+}
+.box2 {
+  height: 200px;
+  width: 200px;
+  background-color: #bfa;
+  background-color: aqua;
+}
+/* 
+  2.带参数的混合(Parametric Mixins)
+    1)混合带参数，参数需要按顺序传递
+    2)混合带参数并有默认值
+      需注意的是，就算有默认值，也要按顺序传递
+*/
+.box3 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+.box4 {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+}
+/* 
+  3.命名参数  可以在向混合传参是指定参数名称，从而不需要按顺序传入
+*/
+div {
+  border: 10px solid red;
+}
+/* 
+  4.@arguments  变量包含了传入的所有参数
+*/
+.box5 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  background: url('../../../images/001.jpg') cyan no-repeat contain;
+}
+/*# sourceMappingURL=./Mixins.css.map */

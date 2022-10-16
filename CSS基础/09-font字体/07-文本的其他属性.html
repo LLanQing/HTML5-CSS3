@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    /* 
+        text-decoration 设置文本修饰
+        text-decoration 属性是以下三种属性的简写,按顺序
+            语法：text-decoration：text-decoration-line text-decoration-color text-decoration-style；
+            text-decoration-line
+              可选值：
+                none 什么都没有
+                underline 下划线
+                line-through 删除线
+                overline 上划线
+                blink   定义闪烁的文本。
+            text-decoration-color
+                color
+            text-decoration-style
+                solid 	默认值。线条将显示为单线。
+                double  线条将显示为双线。
+                dotted  线条将显示为点状线。
+                dashed  线条将显示为虚线。
+                wavy    线条将显示为波浪线
+
+        direction 规定文本的方向 / 书写方向
+            ltr 默认。文本方向从左到右。
+            rtl 文本方向从右到左。
+        
+    */
+    .box1 {
+      font-size: 50px;
+      font-family: 微软雅黑;
+      /* text-decoration: overline; */
+      text-decoration: underline red wavy;
+      /* direction: rtl; */
+    }
+
+    /* 
+        white-space 设置网页如何处理空白
+            可选值：
+                normal 默认。空白会被浏览器忽略。
+                nowrap 不换行,文本会在在同一行上继续，直到遇到 <br> 标签为止。
+                pre 空白会被浏览器保留。其行为方式类似 HTML 中的 <pre> 标签。
+                pre-wrap  保留空白符序列，但是正常地进行换行。
+                pre-line  合并空白符序列，但是保留换行符。
+
+        text-overflow 指定当文本溢出包含的元素，应该发生什么
+              clip    剪切文本。
+              ellipsis  显示省略符号 ... 来代表被修剪的文本。
+              string    使用给定的字符串来代表被修剪的文本。
+        注意：text-overflow 必须配合以下两个属性使用，否则无效：
+                  white-space: nowrap;
+                  overflow: hidden;
+    */
+    .box2 {
+      width: 500px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box2">
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, minus fugit in perspiciatis reprehenderit consequuntur aspernatur repellat cumque quidem asperiores quaerat placeat, tenetur vel veritatis deserunt numquam. Dolores, cupiditate enim.
+
+  </div>
+
+  <div class="box1">
+    今天天气真不错!!!
+  </div>
+</body>
+
+</html>

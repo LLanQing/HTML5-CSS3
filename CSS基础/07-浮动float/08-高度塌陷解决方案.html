@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .box1 {
+      border: 10px red solid;
+      /* overflow: hidden; */
+    }
+
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background-color: #bfa;
+      float: left;
+    }
+
+    /* 1.清除box2浮动对box3的影响，而box1包裹box3，从而使box1的高度不会塌陷 */
+    .box3 {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      /* clear: both; */
+    }
+
+    /* 2.使用伪元素达到增加box3解决高度塌陷一样的效果 */
+    .box1::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box1">
+    <div class="box2"></div>
+    <!-- <div class="box3">aa</div> -->
+  </div>
+
+</body>
+
+</html>

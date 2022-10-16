@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background-color: #bfa;
+      /* 开启bfc后父元素box1不会跟着子元素box3margin */
+      overflow: hidden;
+      float: left;
+
+    }
+
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background-color: orange;
+      /* 开启bfc后box2不被box1浮动盖住 */
+      overflow: hidden;
+    }
+
+    .box3 {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box1">
+    <div class="box3"></div>
+  </div>
+
+  <div class="box2">
+  </div>
+
+</body>
+
+</html>

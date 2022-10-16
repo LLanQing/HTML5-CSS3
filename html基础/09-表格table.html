@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>表格table</title>
+  <style>
+    /* thead {
+      color: green;
+    }
+
+    tbody {
+      color: blue;
+    }
+
+    tfoot {
+      color: red;
+    } */
+
+    table {
+      width: 50%;
+      border: 1px solid black;
+      margin: 0 auto;
+
+      /* border-spacing: 指定边框之间的距离 */
+      /* border-spacing: 0px; */
+
+      /* border-collapse: collapse; 设置边框的合并 */
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 1px solid black;
+      height: 100px;
+      /* 默认情况下元素在td中是垂直居中的 可以通过 vertical-align 来修改*/
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    /* 
+            如果表格中没有使用tbody而是直接使用tr，
+                那么浏览器会自动创建一个tbody，并且将tr全都放到tbody中
+                tr不是table的子元素
+         */
+    /* odd奇数，even偶数 */
+    tbody>tr:nth-child(odd) {
+      background-color: #bfa;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    table 用来定义表格的标签
+      属性名      属性值             描述
+      align     left,center,right   规定表格相对周围元素的对齐方式
+      border    1或者’’ ‘’          规定表格单元是否拥有边框，默认为" "，表示没有边框
+      width     像素值或百分比       规定表格的宽度
+
+    注意：
+      在 HTML5 中，仅支持 "border" 属性，并且只允许使用值 "1" 或 ""。不要使用属性定义样式，
+    最好使用css来定义table的样式。
+
+
+    tr 用来定义表格中的行，必须嵌套在<table></table> 标签中
+    td 用来定义表格中的单元格，必须嵌套在<tr></tr> 标签中
+    th 用来定义表格中的表头，表头单元格里面的内容加粗居中显示，必须嵌套在<tr></tr> 标签中
+      属性名      属性值        描述
+      colspan     number      规定表头单元格可横跨的列数。
+      rowspan     number      规定表头单元格可横跨的行数
+      headers     header_id   规定与单元格相关联的一个或多个表头单元格。
+
+   -->
+
+  <body>
+    <table border="1" width='50%' align="center">
+      <!-- 在table中使用tr表示表格中的一行，有几个tr就有几行 -->
+      <tr>
+        <!-- th 用来定义表格中的表头，表头单元格里面的内容加粗居中显示 -->
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>成绩</th>
+        <th>住址</th>
+      </tr>
+      <tr>
+        <!-- 在tr中使用td表示一个单元格，有几个td就有几个单元格 -->
+        <td>A1</td>
+        <td>B1</td>
+        <td>C1</td>
+        <td>D1</td>
+      </tr>
+      <tr>
+        <td>A2</td>
+        <td>B2</td>
+        <td>C2</td>
+        <!-- rowspan 纵向的合并单元格，纵跨多少行 -->
+        <td rowspan="2">D2</td>
+      </tr>
+      <tr>
+        <td>A3</td>
+        <td>B3</td>
+        <td>C3</td>
+      </tr>
+      <tr>
+        <td>A4</td>
+        <td>B4</td>
+        <!--colspan 横向的合并单元格，横跨多少列-->
+        <td colspan="2">C4</td>
+      </tr>
+    </table>
+
+    <hr>
+    <!-- 
+      可以将一个表格分成三个部分：
+        头部 thead
+        主体 tbody
+        底部 tfoot
+
+      提示和注释
+        注释：<thead> 元素内部必须包含一个或者多个 <tr> 标签。
+        提示：<thead>、<tbody> 和 <tfoot> 元素默认不会影响表格的布局。
+          不过，您可以使用 CSS 来为这些元素定义样式，从而改变表格的外观。
+
+        如果没有使用<thead>、<tbody> 和 <tfoot>布局，则整个table都是属于tbody内容
+     -->
+    <!-- <table border="1" width='50%' align="center">
+      <thead>
+        <tr>
+          <th>日期</th>
+          <th>收入</th>
+          <th>支出</th>
+          <th>合计</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2000.1.1</td>
+          <td>500</td>
+          <td>200</td>
+          <td>300</td>
+        </tr>
+        <tr>
+          <td>2000.1.1</td>
+          <td>500</td>
+          <td>200</td>
+          <td>300</td>
+        </tr>
+        <tr>
+          <td>2000.1.1</td>
+          <td>500</td>
+          <td>200</td>
+          <td>300</td>
+        </tr>
+        <tr>
+          <td>2000.1.1</td>
+          <td>500</td>
+          <td>200</td>
+          <td>300</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>合计</td>
+          <td>300</td>
+        </tr>
+      </tfoot>
+    </table> -->
+
+    <hr>
+
+    <table>
+      <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>地址</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>孙悟空</td>
+        <td>男</td>
+        <td>18</td>
+        <td>花果山</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>猪八戒</td>
+        <td>男</td>
+        <td>28</td>
+        <td>高老庄</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>沙和尚</td>
+        <td>男</td>
+        <td>38</td>
+        <td>流沙河</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>唐僧</td>
+        <td>男</td>
+        <td>16</td>
+        <td>女儿国</td>
+      </tr>
+      </tr>
+    </table>
+
+  </body>
+
+</body>
+
+</html>

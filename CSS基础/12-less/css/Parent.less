@@ -1,0 +1,31 @@
+/* 
+  在嵌套规则中， & 表示父选择器，常用于给现有选择器添加伪类。
+*/
+
+.box1 {
+	height: 500px;
+	width: 500px;
+	background-color: #bfa;
+
+	> div {
+		width: 200px;
+		background-color: blue;
+
+		.box3 {
+			width: 100px;
+			height: 100px;
+			background-color: skyblue;
+		}
+
+		&:hover {
+			background-color: cyan;
+			height: 200px;
+		}
+	}
+
+	.box4 {
+		width: 200px;
+		height: 200px;
+		background-color: pink;
+	}
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      /* 
+        设计图 
+                750px  
+            使用vw作为单位
+                100vw
+            创建一个 48px x 35px 大小的元素
+            100vw = 750px(设计图的像素) 0.1333333333333333vw = 1px
+            6.4vw = 48px(设计图像素)
+            4.667vw = 35px
+        网页中字体大小最小是12px，不能设置一个比12像素还小的字体
+            如果我们设置了一个小于12px的字体，则字体自动设置为12
+        0.1333333vw = 1px
+        5.3333vw = 40px
+
+        em
+          - em是相对于应用在当前元素的字体尺寸。一般浏览器字体大小默认为16px，则2em == 32px；
+          - 1em = 1font-size
+          - em会根据字体大小的改变而改变
+        rem
+          - rem是根 em（root em）的缩写，rem作用于非根元素时，相对于根元素字体大小；
+            rem作用于根元素字体大小时，相对于其出初始字体大小。浏览器字体大小默认为16px,则1rem==16px
+        vw  
+          viewpoint width，视窗宽度，1vw=视窗宽度的1%
+        vh
+          viewpoint height，视窗高度，1vh=视窗高度的1%
+        vmin
+          vw和vh中较小的那个。
+        vmax
+          vw和vh中较大的那个
+      */
+      font-size: 5.3333vw;
+    }
+
+    .box1 {
+      width: 10rem;
+      height: 5rem;
+      background-color: #bfa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+        不同的设备完美视口的大小是不一样的
+            iphone6 -- 375
+            iphone6plus -- 414
+        由于不同设备视口和像素比不同，所以同样的375个像素在不同的设备下意义是不一样，
+            比如在iphone6中 375就是全屏，而到了plus中375就会缺一块
+        所以在移动端开发时，就不能再使用px来进行布局了
+
+        vw 表示的是视口的宽度（viewport width）
+            - 100vw = 一个视口的宽度
+            - 1vw = 1%视口宽度
+            vw这个单位永远相当于视口宽度进行计算
+            设计图的宽度
+                750px 1125px
+            设计图 
+                750px  
+            使用vw作为单位
+                100vw
+            创建一个 48px x 35px 大小的元素
+            100vw = 750px(设计图的像素) 0.1333333333333333vw = 1px
+            6.4vw = 48px(设计图像素)
+            4.667vw = 35px
+
+
+    -->
+  <div class="box1">
+  </div>
+
+</body>
+
+</html>

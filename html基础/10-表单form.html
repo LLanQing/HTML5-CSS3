@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>表单form</title>
+</head>
+<!-- 
+          表单：
+              - 在现实生活中表单用于提交数据
+              - 在网页中也可以使用表单，网页中的表单用于将本地的数据提交给远程的服务器
+              - 使用form标签来创建一个表单
+       -->
+<!-- 
+          form的属性
+              action url地址 表单要提交的服务器的地址
+              name	名称	用于指定表单的名称，以区分同一个页面中的多个表单域
+              accept-charset	character_set	规定服务器可处理的表单数据字符集。
+              autocomplete	on/off	规定是否启用表单的自动完成功能。
+              method	用于设置表单数据的提交方式，其取值为get或post
+                get 	默认。将表单数据（form-data）以名称/值对的形式附加到 URL 中：URL?name=value&name=value。
+                post  以 HTTP post 事务的形式发送表单数据（form-data）。
+                关于 GET 的注释：
+                  将表单数据以名称/值对的形式附加到 URL 中（query或params参数）
+                  URL 的长度是有限的（大约 3000 字符）
+                  绝不要使用 GET 来发送敏感数据！（在 URL 中是可见的）
+                  对于用户希望加入书签的表单提交很有用
+                  GET 更适用于非安全数据，比如在 Google 中查询字符串
+
+                关于 POST 的注释：
+                  将表单数据附加到 HTTP 请求的 body 内（数据不显示在 URL 中） （请求体data）
+                  没有长度限制
+                  通过 POST 提交的表单不能加入书签
+
+              target	规定在何处打开 action URL。
+                _blank  	在新窗口/选项卡中打开。
+                _self     在同一框架中打开。（默认）
+                _parent   在父框架中打开。
+                _top	    在整个窗口中打开。
+                framename 	在指定的 iframe 中打开。
+       -->
+
+<body>
+
+  <form action="09-表格table.html" name="form1" method="get" autocomplete="on">
+    <!--
+      <input>
+          type属性：
+              属性值	  描述
+              button	定义可点击按钮(多数情况下，用于通过JavaScript启动脚本)
+              checkbox	定义复选框
+              file	定义输入字段和"浏览"按钮，供文件上传。
+              hidden	定义隐藏的输入字段
+              image	定义图像形式的提交按钮
+              password	定义密码字段。该字段中的字符被掩码
+              radio	定义单选按钮
+              reset	定义重置按钮。重置按钮会清楚表单中的所有数据。
+              submit	定义提交按钮。提交按钮会把表单数据发送到服务器。
+              text	定义单行的输入字段，用户可在其中输入文本。默认宽度为 20 个字符。
+
+          value	text	指定 <input> 元素 value 的值。
+          placeholder	text	placeholder属性规定可描述输入 <input> 字段预期值的简短的提示信息 。
+          name text name属性规定 <input> 元素的名称。
+          注意：数据要提交到服务器中，必须要为元素指定一个name属性值,
+                name属性值会被当做query参数的key
+
+      <label> 标签为 input 元素定义标注（标记）。
+                for element_id 规定 label与哪个表单元素绑定。
+    -->
+    <label for="username">用户名:</label>
+    <input type="text" name="username" autofocus id="username" placeholder="请输入用户名">
+    <br><br>
+
+    <!-- 密码框-->
+    <label for="password">密码框:</label>
+    <input type="password" name="password" id="password" placeholder="请输入密码">
+    <br><br>
+
+    <!-- 文本区域 -->
+    <label for="remark" style="vertical-align: top;">备注:</label>
+    <textarea name="remark" id="remark" cols="40" rows="2"></textarea>
+    <br><br>
+
+    <!--单选按钮
+          - 像这种选择框，必须要指定一个value属性，value属性最终会作为用户的填写的值传递给服务器
+          - checked 可以将单选按钮设置为默认选中
+          - 单选按钮的name必须是相同的，用来表示这些选项是同一组才能实现多选一
+
+        注意：单选框name必须一致
+
+    -->
+    单选按钮 <input type="radio" name="hello" value="a">
+    <input type="radio" name="hello" value="b" checked>
+    <br><br>
+
+    <!--多选框-->
+    多选框 <input type="checkbox" name="test1" value="1">
+    <input type="checkbox" name="test2" value="2">
+    <input type="checkbox" name="test3" value="3" checked>
+
+    <br><br>
+
+    <!-- 下拉列表 value的值会作为value传递给服务器-->
+    <select name="haha">
+      <option value="i">选项一</option>
+      <option selected value="ii">选项二</option>
+      <option value="iii">选项三</option>
+      <option value="qq" disabled>qq</option>
+    </select>
+
+    <br><br>
+    <!--提交按钮 -->
+    <input type="submit" value="注册">
+    <!-- 重置按钮 清空所有表单的输入至初始状态-->
+    <input type="reset">
+  </form>
+
+  <hr>
+
+  <form action="target.html" name="form2">
+    <!-- 
+      autocomplete="off" 关闭自动补全
+      readonly 将表单项设置为只读，数据会提交
+      disabled 将表单项设置为禁用，数据不会提交
+      autofocus 设置表单项自动获取焦点
+     -->
+    <input type="text" name="username" value="hello" readonly>
+    <br><br>
+    <input type="text" name="username" autofocus>
+    <br><br>
+    <input type="text" name="b">
+
+    <br><br>
+    <input type="color">
+    <br><br>
+    <input type="email">
+    <br><br>
+
+    <input type="submit">
+    <!-- 重置按钮 -->
+    <input type="reset">
+    <!-- 普通的按钮 -->
+    <input type="button" value="按钮">
+    <br><br>
+
+    <button type="submit">提交</button>
+    <button type="reset">重置</button>
+    <button type="button">按钮</button>
+  </form>
+
+
+</body>
+
+</html>

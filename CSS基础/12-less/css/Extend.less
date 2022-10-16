@@ -1,0 +1,15 @@
+/* 
+  继承可让多个选择器应用同一组属性，最终编译为并集选择器
+    其性能比混合高，但灵活性比混合低
+    语法： :extend()
+*/
+
+.box1 {
+	height: 200px;
+	width: 200px;
+	background-color: #bfa;
+}
+
+.box2:extend(.box1) {
+	background-color: aqua;
+}

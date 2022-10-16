@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 
+      长度单位：
+        绝对长度
+          绝对长度单位是一个固定的值，它反应一个真实的物理尺寸。绝对长度单位视输出介质而定，
+          不依赖于环境（显示器、分辨率、操作系统等）。
+
+          px像素 (1px = 1/96th of 1in)
+              - 屏幕（显示器）实际上是由一个一个的小点点构成的
+              - 不同屏幕的像素大小是不同的，像素越小的屏幕显示的效果越清晰
+              - 所以同样的200px在不同的设备下显示效果不一样
+          cm厘米
+          mm毫米
+          in英寸 (1in = 96px = 2.54cm)
+          pt point，大约1/72英寸； (1pt = 1/72in)
+
+        相对长度
+          相对长度单位指定了一个长度相对于另一个长度的属性。对于不同的设备相对长度更适用。
+
+          %百分比
+              - 也可以将属性值设置为相对于其父元素属性的百分比
+              - 设置百分比可以使子元素跟随父元素的改变而改变
+          em
+              - em是相对于应用在当前元素的字体尺寸。一般浏览器字体大小默认为16px，则2em == 32px；
+              - 1em = 1font-size
+              - em会根据字体大小的改变而改变
+          rem
+              - rem是根 em（root em）的缩写，rem作用于非根元素时，相对于根元素字体大小；
+                rem作用于根元素字体大小时，相对于其出初始字体大小。浏览器字体大小默认为16px,则1rem==16px
+          vw  
+            viewpoint width，视窗宽度，1vw=视窗宽度的1%
+          vh
+            viewpoint height，视窗高度，1vh=视窗高度的1%
+          vmin
+            vw和vh中较小的那个。
+          vmax
+            vw和vh中较大的那个
+    */
+    html {
+      font-size: 30px;
+    }
+
+    h1 {
+      font-size: 1cm;
+    }
+
+    h2 {
+      font-size: 1mm;
+    }
+
+    .p1 {
+      font-size: 1in;
+    }
+
+    .p2 {
+      font-size: 1pt;
+    }
+
+    .box1 {
+      width: 10em;
+      height: 100px;
+      background-color: orange;
+    }
+
+    .box2 {
+      width: 50%;
+      height: 50%;
+      background-color: aqua;
+    }
+
+    .box3 {
+      font-size: 50px;
+      width: 10em;
+      height: 10em;
+      /* width: 10rem;
+      height: 10rem; */
+      background-color: greenyellow;
+    }
+
+    .box4 {
+      width: 10vw;
+      height: 10vw;
+      background-color: blue;
+    }
+
+    .box5 {
+      width: 10vh;
+      height: 10vh;
+      background-color: red;
+    }
+
+    .box6 {
+      width: 30vmin;
+      height: 30vmin;
+      background-color: skyblue;
+    }
+
+    .box7 {
+      width: 10vmax;
+      height: 10vmax;
+      background-color: rgb(236, 113, 18);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>这是一个标题 1</h1>
+  <h2>这是一个标题 2</h2>
+  <p class="p1">这是一个段落。</p>
+  <p class="p2">这是另一个段落。</p>
+
+  <hr>
+
+  <div class="box1">
+
+    <div class="box2"></div>
+  </div>
+
+  <div class="box3"></div>
+  <hr>
+
+  <div class="box4">
+    <div class="box5"></div>
+  </div>
+  <hr>
+  <div class="box6">
+    <div class="box7"></div>
+  </div>
+
+</body>
+
+</html>

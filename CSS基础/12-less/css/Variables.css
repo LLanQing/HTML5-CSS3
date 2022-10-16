@@ -1,0 +1,51 @@
+/*  
+    less多行注释保留,内容会被解析到css文件中
+    单行注释不被保留在编译生成的 CSS 中
+*/
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: #bfa;
+}
+/* 
+  2.变量插值(Variable Interpolation)
+    变量用于选择器名、属性名、URL、@import语句,必须以 @{变量名} 的形式使用
+*/
+.box2 {
+  width: 200px;
+  height: 200px;
+  background-image: url('../../../images/1.jpg');
+  background-size: cover;
+}
+/*  @import css语法，用于从其他样式表导入样式规则。
+        @import 规则必须在 CSS/less 文档的头部
+    语法：@import url|string list-of-mediaqueries;
+          url|string  表示要引入资源地址。这个 URL 可以是绝对路径或者相对路径。
+          list-of-mediaqueries  是一个逗号分隔的媒体查询条件列表，
+            设置 URL 引入的 CSS 规则在什么条件下应用。如果浏览器不支持列表中的任何一条媒体查询条件，
+            就不会引入 URL 指定的 CSS 文件。
+*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ebe3e3;
+}
+/* 
+  3.延迟加载(Lazy Evaluation) 
+    当一个变量被声明多次，会取最后一次的值，并从当前作用域往外寻找变量。
+*/
+.box3 {
+  width: 115px;
+  height: 335px;
+}
+/* 
+  4.属性名变量(Properties as Variables)
+    将属性名作为变量引用，
+    语法：$属性名
+*/
+.box4 {
+  width: 300px;
+  height: 300px;
+  background-color: #bfa;
+}
+/*# sourceMappingURL=./Variables.css.map */

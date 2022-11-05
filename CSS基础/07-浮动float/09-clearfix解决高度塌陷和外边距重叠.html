@@ -8,21 +8,31 @@
     .box1 {
       width: 200px;
       /* height: 200px; */
+      /* border: red 5px solid; */
       background-color: #bfa;
     }
 
     /* 1.使用伪元素::before在父元素中添加一个子元素，用来隔开有外边距的子元素 */
-    /* .box1::before {
+    /* .box1::before,.box1::after {
       content: '';
       display: table;
+      clear: both;
     } */
 
     .box2 {
       width: 100px;
       height: 100px;
       background-color: orange;
-      /* margin-top: 100px; */
+      margin-top: 50px;
       float: left;
+      margin-bottom: 50px;
+    }
+
+    .box3{
+      width: 100px;
+      height: 100px;
+      background-color:blue;
+      margin-top: 50px;
     }
 
     /* clearfix 这个样式可以同时解决高度塌陷（after）和外边距重叠（before）的问题，
@@ -41,6 +51,7 @@
   <div class="box1 clearfix">
     <div class="box2"></div>
   </div>
+  <div class="box3"></div>
 </body>
 
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<style>
+      body{
+        background-color: yellow;
+      }
+			.box1 {
+				height: 61px;
+				width: 61px;
+				background: url('img/index_sprite.png') -170px -60px;
+			}
+
+      .box1:hover{
+        background-position: -170px -125px;
+      }
+		</style>
+	</head>
+
+	<body>
+		<!-- 
+        使用雪碧图的步骤：
+            1.创建一个元素
+            2.确认要使用的图标的大小
+            3.将元素设置为和图标大小一致
+            4.将雪碧图设置为元素的背景图片
+            5.测量图标偏移量
+            6.设置偏移量
+
+     -->
+		<div class="box1"></div>
+	</body>
+</html>

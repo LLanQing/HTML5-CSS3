@@ -1,0 +1,153 @@
+*{
+  /* 初始化样式，取消内外边距 */
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  /* 溢出隐藏 */
+  overflow:hidden;
+}
+
+
+.navbar{
+  position: relative;
+  /* width: 100%; */
+  width: 100vw;
+}
+
+#checkbox{
+  /* 隐藏复选框 */
+  display: none;
+}
+
+.navbar label{
+  position: absolute;
+  top:0;
+  left: 70px;
+  width: 100%;
+  height: 43px;
+  font-size: 30px;
+  color:#5a738e;
+  background-color: #ededed;
+  padding-left: 20px;
+  border: 1px solid #d9dee4;
+  /* 过渡动画 */
+  transition: all 0.5s;
+}
+
+.navbar label i{
+  font-size: 30px;
+  /* 鼠标移入变成小手 */
+  cursor: pointer;
+}
+
+ul{
+  list-style: none;
+  width: 70px;
+  /* height: 100%;	基于包含它的块级对象的百分比高度，不是窗口的100%高度 */
+  height: 100vh;
+  background-color: #2a3f54;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+li{
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+ul>li:first-child{
+  display: flex;
+  /* 水平垂直居中 */
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+ul>li:first-child span{
+  /* 文本不换行 */
+  white-space: nowrap;
+  color: #fff;
+  padding-left: 10px;
+  /* 先隐藏文字 */
+  display: none;
+}
+
+ul>li>a{
+  /* 去掉下划线 */
+  text-decoration: none;
+  display: flex;
+  /* 默认是横向排列 */
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  color: #d1d1d1;
+  width: 100%;
+  height: 100%;
+}
+
+ul>li>a:hover{
+  color: #fff;
+  background-color: #363f4a;
+}
+
+a>.iconfont{
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+ul>li>a>span{
+  font-size: 12px;
+  /* 这个设置很关键，因为变化的时候，由于横向宽度不够导致文字换行，然后动画执行到最后
+      宽度够了，又没有换行。就会出现样式闪烁 */
+  white-space: nowrap;
+}
+
+/* :checked选择器是判断复选框是否选中 */
+/* 
+      选择下一个兄弟
+          语法：前一个 + 下一个
+
+      选择下边所有的兄弟
+          语法：兄 ~ 弟
+    */
+
+input:checked + label{
+  left: 200px;
+  /* transition: all 0.5s; 动画效果不能加在这里，加在这里只有选中的时候有动画，取消选中没有动画*/
+}
+
+input:checked ~ ul{
+  width: 200px;
+}
+
+input:checked ~ ul li:first-child{
+  /* 对齐方式改为从头对齐 */
+  justify-content: flex-start;
+}
+
+input:checked ~ ul li:first-child span{
+  /* 文字显示 */
+  display: block;
+}
+
+input:checked ~ ul li a{
+  /* 横向排列 */
+  flex-direction: row;
+  /* 对齐方式改为从头对齐 */
+  justify-content: flex-start;
+  padding-left:20px;
+}
+
+input:checked ~ ul li a span{
+  
+  margin-left:20px;
+  font-size: 15px;
+}

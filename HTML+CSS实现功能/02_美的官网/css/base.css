@@ -1,0 +1,26 @@
+/* 公共样式表 */
+body {
+	height: 100%;
+	background-color: #fff;
+	color: #666;
+	font: 12px/1.5 'Lucida Grande', Arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53', sans-serif;
+}
+
+/* clearfix 解决高度塌陷和外边距重叠 */
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* 定宽水平居中 */
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* 图片上下之间有条缝，调整对齐方式 */
+img{
+	vertical-align: top;
+}

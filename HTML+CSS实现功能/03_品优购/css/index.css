@@ -1,0 +1,183 @@
+/* 首页样式 */
+
+/* 轮播图+右侧新闻导航栏 样式 */
+.main {
+	width: 980px;
+	height: 455px;
+	margin-left: 220px;
+	margin-top: 10px;
+}
+/* 轮播图 */
+.carousel {
+	width: 721px;
+	height: 455px;
+	float: left;
+}
+/* 新闻公告导航栏 */
+.newsflash {
+	width: 250px;
+	height: 455px;
+	float: right;
+}
+/* 公告 */
+.news {
+	height: 165px;
+	border: 1px solid #e4e4e4;
+}
+.news-head {
+	height: 33px;
+	line-height: 33px;
+	border-bottom: 1px dotted #e4e4e4;
+	padding: 0 15px;
+}
+.news-head h5 {
+	font-size: 14px;
+	float: left;
+}
+.news-head .more {
+	float: right;
+}
+.news-head .more::after {
+	content: '\e920';
+	font-family: 'icomoon';
+}
+.news-body {
+	padding: 5px 15px 0;
+}
+.news-body ul li {
+	height: 24px;
+	line-height: 24px;
+	/* 多余的文字隐藏并且显示... */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* 生活服务 */
+.lifeservice {
+	height: 210px;
+	border-left: 1px solid #e4e4e4;
+  padding-left: 1px;
+}
+.lifeservice li {
+	float: left;
+	width: 62px;
+	height: 70px;
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+  text-align: center;
+}
+.lifeservice li i{
+  display: inline-block;
+  width: 24px;
+  height: 28px;
+  background: url('../images/icons.png') no-repeat -19px -15px;
+  margin-top: 12px;
+}
+
+/* 特价商品 */
+.bargin {
+	margin-top: 5px;
+}
+
+
+/* 今日推荐样式 */
+.recommend{
+	height: 163px;
+	background-color: #ebebeb;
+	margin-top: 12px;
+}
+.recommend-head{
+	width: 205px;
+	height: 163px;
+	background-color: #5c5251;
+	text-align: center;
+	padding-top: 30px;
+}
+.recommend-body ul li{
+	float: left;
+	position: relative;
+}
+/* 将图片的宽和高写死，这样不管图片是多大，是这个宽高 */
+.recommend-body ul li img{
+	width: 248px;
+	height: 163px;
+}
+/* nth-child(an+ b).描述：a代表一个循环的大小，N是一个计数器（从0开始），以及b是偏移量。 在这里，我们对所有索引是3的倍数的p元素指定了背景颜色： */
+/* 只给从3到0的li加上after伪元素 */
+.recommend-body ul li:nth-child(-n+3)::after{
+	content: '';
+	position: absolute;
+	top: 10px;
+	right: 0;
+	width: 1px;
+	height: 145px;
+	background-color: #ddd;
+}
+
+
+/* 商品楼层模块 */
+.floor{
+	margin-top: 30px;
+}
+/* 家用电器 */
+/* 头部 */
+.appliance-hd{
+	height: 30px;
+	border-bottom:  2px solid #c81623;
+}
+.appliance-hd h3{
+	float: left;
+	font-size: 18px;
+	color: #c81623;
+	font-weight: normal;
+}
+.tab-list{
+	height: 30px;
+	line-height: 30px;
+}
+.tab-list ul li{
+	float: left;
+}
+.tab-list ul li a{
+	margin: 0 15px;
+}
+/* 主体 */
+.appliance-bd{
+	height: 361px;
+}
+.tab-items>div{
+	float: left;
+	height: 361px;
+}
+.col_210 {
+    width: 210px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.col_210  ul {
+    padding-left: 12px;
+}
+.col_210 ul li{
+	float: left;
+	width: 85px;
+	height: 34px;
+	line-height: 34px;
+	border-bottom: 1px solid #ccc;
+	margin-right: 10px;
+}
+.col_329 {
+    width: 329px;
+}
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #ccc;
+}
+.col_219 {
+    width: 219px;
+}
+.bb{
+	/* 一般情况下，如果a包含了有宽度的盒子，a需要转成块元素 */
+	display: block;
+	border-bottom: 1px solid #ccc;
+}

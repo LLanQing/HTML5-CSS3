@@ -1,0 +1,284 @@
+body {
+	max-width: 540px;
+	min-width: 320px;
+	margin: 0 auto;
+	font: normal 14px/1.5 Tahoma, 'Lucida Grande', Verdana, 'Microsoft Yahei', STXihei, hei;
+	color: #000;
+	background: #f2f2f2;
+	overflow-x: hidden;
+	/*点击高亮我们需要清除 设置为transparent 完成透明*/
+	-webkit-tap-highlight-color: transparent;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+div {
+	box-sizing: border-box;
+}
+
+/* 搜索模块 */
+.search-index {
+	display: flex;
+	/* 固定定位永远参照于浏览器的视口进行定位 */
+	position: fixed;
+	top: 0;
+	/* 水平居中对齐 */
+	left: auto;
+	/* 或者 */
+	/* left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); */
+	/* 固定定位的盒子需要有宽度 */
+	width: 100%;
+	height: 44px;
+	max-width: 540px;
+	min-width: 320px;
+	background-color: #f6f6f6;
+}
+
+.search {
+	flex: 1;
+	height: 26px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	/* 让搜索框垂直居中 */
+	align-self: center;
+	/* 因为是border-box，所以搜索框内容区只有24px,所以文字垂直居中应该设置行高为24px */
+	line-height: 24px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	margin: 0 10px;
+}
+.search::before {
+	content: '';
+	float: left;
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: url('../images/sprite.png') -59px -279px;
+	background-size: 104px;
+	margin: 5px;
+}
+
+.user {
+	width: 44px;
+	height: 44px;
+	font-size: 12px;
+	text-align: center;
+	color: #2eaae0;
+}
+
+.user::before {
+	content: '';
+	display: block;
+	width: 23px;
+	height: 23px;
+	background: url('../images/sprite.png') -59px -194px;
+	background-size: 104px;
+	margin: 4px auto -2px;
+}
+
+/* 广告栏轮播图 */
+.banner {
+	margin-top: 44px;
+}
+
+.banner img {
+	width: 100%;
+}
+
+/* 局部导航栏 */
+.local-nav {
+	display: flex;
+	height: 64px;
+	margin: 3px 4px;
+	background-color: #fff;
+	border-radius: 8px;
+}
+
+.local-nav li {
+	flex: 1;
+}
+
+.local-nav a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 8px;
+	font-size: 12px;
+}
+
+.local-nav li [class^='local-nav-icon'] {
+	width: 32px;
+	height: 32px;
+	background: url('../images/localnav_bg.png') 0 0;
+	background-size: 32px;
+}
+
+.local-nav li .local-nav-icon-icon2 {
+	background-position: 0 -32px;
+}
+
+.local-nav li .local-nav-icon-icon3 {
+	background-position: 0 -64px;
+}
+
+.local-nav li .local-nav-icon-icon4 {
+	background-position: 0 -96px;
+}
+
+.local-nav li .local-nav-icon-icon5 {
+	background-position: 0 -128px;
+}
+
+/* 主导航栏 */
+nav {
+	border-radius: 8px;
+	margin: 0 4px 3px;
+	overflow: hidden;
+}
+
+.nav-common {
+	display: flex;
+	height: 88px;
+}
+
+.nav-common:nth-child(1) {
+	background-image: linear-gradient(to right, #fa5956, #fb8650);
+}
+
+.nav-common:nth-child(2) {
+	margin: 3px 0;
+	background-image: linear-gradient(to right, #4b90ed, #53bced);
+}
+
+.nav-common:nth-child(3) {
+	background-image: linear-gradient(to right, #34c2a9, #6cd559);
+}
+
+.nav-items {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+/* 给前两个nav-item添加右边框 -n+2便是前两个*/
+.nav-items:nth-child(-n + 2) {
+	border-right: 1px solid #fff;
+}
+
+.nav-items a {
+	flex: 1;
+	text-align: center;
+	line-height: 44px;
+	font-size: 14px;
+	color: #fff;
+	/* 文字阴影 */
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.nav-items a:nth-child(2) {
+	border-top: 1px solid #fff;
+}
+
+.nav-items:nth-child(1) a {
+	background: url('../images/hotel.png') no-repeat bottom center;
+	background-size: 121px auto;
+}
+
+/* 子导航栏 */
+.subnav {
+	border-radius: 8px;
+	margin: 0 4px 3px;
+	padding: 5px 0;
+	background-color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.subnav li {
+	/* 里面的子盒子可以写 % 相对于父级来说的 */
+	flex: 20%;
+	margin-top: 5px;
+}
+
+.subnav a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 12px;
+}
+
+.subnav-icon {
+	width: 28px;
+	height: 28px;
+	background: url('../images/subnav-bg.png');
+	background-size: 28px;
+}
+
+/* 销售模块 */
+.sales {
+	border-top: 1px solid #bbb;
+	margin: 4px;
+	background-color: #fff;
+}
+
+.sales-hd {
+	height: 44px;
+	border-bottom: 1px solid #ccc;
+}
+
+.sales-hd h2 {
+	position: relative;
+	font-size: 0px;
+}
+
+.sales-hd h2::after {
+	content: '';
+	position: absolute;
+	top: 15px;
+	left: 8px;
+	width: 79px;
+	height: 15px;
+	background: url('../images/hot.png') 0 -20px;
+	background-size: 79px;
+}
+
+.more {
+	float: right;
+	margin: 8px 8px 0 0;
+	background: linear-gradient(to right, #ff506c, #ff6bc6);
+	border-radius: 15px;
+	padding: 3px 10px 3px 10px;
+	color: #fff;
+}
+
+.more::after {
+	content: '>';
+	padding-left: 5px;
+}
+
+.row {
+	display: flex;
+}
+
+.row a {
+	flex: 1;
+	border-bottom: 1px solid #eee;
+}
+
+.row a:nth-child(1) {
+	border-right: 1px solid #eee;
+}
+
+.row a img {
+	width: 100%;
+}

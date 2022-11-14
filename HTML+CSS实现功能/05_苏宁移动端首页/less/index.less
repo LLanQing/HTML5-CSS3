@@ -1,0 +1,114 @@
+// 首页样式less文件
+// @import 导入的意思 可以把一个样式文件导入到另外一个样式文件里面，必须以分号结尾，否则报错
+// link 是把一个 样式文件引入到 html页面里面
+// 在index.less中导入common.less文件，less文件可以省略后缀名
+@import 'common';
+// 让body居中
+body {
+	min-width: 320px;
+	width: 15rem;
+	margin: 0 auto;
+	line-height: 1.5;
+	font-family: Arial, Helvetica;
+	background: #f2f2f2;
+}
+
+@fontsize: 50;
+// 顶部搜索框
+.search-content {
+	display: flex;
+	// 搜索框固定在顶部居中
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 15rem;
+	height: (88rem / @fontsize);
+	background-color: #ffc001;
+
+	// 分类图标
+	.classify {
+		width: (44rem / @fontsize);
+		height: (70rem / @fontsize);
+		background: url(../images/classify.png) no-repeat;
+		background-size: (44rem / @fontsize);
+		margin: (11rem / @fontsize) (25rem / @fontsize) (7rem / @fontsize) (24rem / @fontsize);
+	}
+
+	// 搜索框，自适应宽度
+	.search {
+		flex: 1;
+
+		input {
+			width: 100%;
+			height: (66rem / @fontsize);
+			border: 0;
+			border-radius: (33rem / @fontsize);
+			outline: none;
+			margin-top: (12rem / @fontsize);
+			padding-left: (55rem / @fontsize);
+			background-color: #fff2cc;
+			font-size: (25rem / @fontsize);
+			color: #757575;
+		}
+	}
+
+	// 登录按钮
+	.login {
+		width: (75rem / @fontsize);
+		height: (70rem / @fontsize);
+		line-height: (70rem / @fontsize);
+		text-align: center;
+		margin: (10rem / @fontsize);
+		font-size: (25rem / @fontsize);
+		color: #fff;
+	}
+}
+
+// banner
+.banner {
+	width: (750rem / @fontsize);
+	height: (368rem / @fontsize);
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// 广告部分
+.ad {
+	display: flex;
+
+	a {
+		flex: 1;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+// 导航栏
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+
+	a {
+		flex: 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		img {
+			width: (82rem / @fontsize);
+			height: (82rem / @fontsize);
+			padding: (10rem / @fontsize) 0;
+		}
+
+		span {
+			font-size: (25rem / @fontsize);
+			color: #333;
+		}
+	}
+}
